@@ -1,4 +1,7 @@
+# robots.txt for vinitathakur.com
 User-agent: *
 Disallow:
+Allow: /
 
+# Sitemaps
 Sitemap: https://vinitathakur.com/sitemap.xml
