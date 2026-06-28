@@ -12,6 +12,7 @@
 <meta property="og:title" content="Vinita Thakur | Founder, Investor &amp; Women's Health Entrepreneur">
 <meta property="og:description" content="Founder of Aurang India (women's health &amp; sustainability company) and creator of CycleAlign — a hormonal health brand for women in leadership. Based in Delhi.">
 <meta property="og:image" content="https://vinitathakur.com/assets/ME.jpg">
+<link rel="og:image" href="https://vinitathakur.com/favicon.png">
 <meta property="og:url" content="https://vinitathakur.com/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_IN">
@@ -19,7 +20,18 @@
 <meta name="twitter:title" content="Vinita Thakur | Founder, Investor &amp; Women's Health Entrepreneur">
 <meta name="twitter:description" content="Founder of Aurang India (women's health &amp; sustainability company) and creator of CycleAlign — a hormonal health brand for women in leadership. Based in Delhi.">
 <meta name="twitter:image" content="https://vinitathakur.com/assets/ME.jpg">
-<link rel="icon" type="image/png" href="/favicon.png">
+<!-- Favicon — VT Monogram Logo -->
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="shortcut icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+<meta name="theme-color" content="#F5EFE6">
+
+<!-- Security Headers (also add these in vercel.json for full protection) -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self' 'unsafe-inline';">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -631,6 +643,49 @@ footer {
 .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
 .footer-made { font-size: 11px; color: rgba(255,255,255,0.2); font-style: italic; }
 @media (max-width: 768px) { .footer-inner { padding: 0 24px; } .footer-bottom { flex-direction: column; text-align: center; } }
+
+/* ── ARTICLES ── */
+.articles-section { background: var(--charcoal); }
+.articles-section .section-label { color: var(--gold); }
+.articles-section .section-label::after { background: var(--gold); }
+.articles-section .section-title { color: #fff; }
+.articles-sub { font-size: 16px; color: rgba(255,255,255,0.5); margin-bottom: 56px; }
+.articles-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; }
+.article-card {
+  display: block;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 8px;
+  padding: 32px 28px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.article-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+}
+.article-card:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(201,168,76,0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+}
+.article-platform {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 16px; font-weight: 500;
+}
+.article-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px; color: #fff; margin-bottom: 12px; line-height: 1.35;
+}
+.article-card p { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.75; margin-bottom: 20px; }
+.article-read { font-size: 13px; color: var(--gold); font-weight: 500; letter-spacing: 0.04em; }
+.articles-cta { text-align: center; margin-top: 48px; }
+@media (max-width: 768px) { .articles-grid { grid-template-columns: 1fr; } }
+
 </style>
 </head>
 
@@ -644,6 +699,7 @@ footer {
     <li><a href="#ventures">Ventures</a></li>
     <li><a href="#story">Story</a></li>
     <li><a href="#blog">Writing</a></li>
+    <li><a href="#articles">Articles</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <button class="nav-toggle" id="navToggle" aria-label="Menu"><span class="burger"></span></button>
@@ -855,6 +911,56 @@ footer {
   </div>
 </section>
 
+<!-- LINKEDIN ARTICLES -->
+<section class="section articles-section" id="articles">
+  <div class="container">
+    <p class="section-label fade">LinkedIn Articles</p>
+    <h2 class="section-title fade">Featured <span>Writing</span></h2>
+    <p class="articles-sub fade">Published on LinkedIn — thoughts on women's health, entrepreneurship, and building in India.</p>
+    <div class="articles-grid">
+      <a href="https://www.linkedin.com/pulse/science-behind-cycle-aware-scheduling-vinita-thakur-ubmpc/" target="_blank" rel="noopener" class="article-card fade">
+        <div class="article-platform">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm13.5 12.27h-3v-5.6c0-1.34-.03-3.07-1.88-3.07-1.88 0-2.17 1.47-2.17 2.98v5.69h-3v-11h2.88v1.5h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v6.47z"/></svg>
+          CycleAlign · Femtech
+        </div>
+        <h3>The Science Behind Cycle-Aware Scheduling</h3>
+        <p>Why scheduling your week around your hormonal cycle isn't a wellness trend — it's a productivity strategy backed by biology.</p>
+        <span class="article-read">Read on LinkedIn →</span>
+      </a>
+      <a href="https://www.linkedin.com/pulse/future-womens-leadership-biological-intelligence-vinita-thakur-5boqc/" target="_blank" rel="noopener" class="article-card fade">
+        <div class="article-platform">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm13.5 12.27h-3v-5.6c0-1.34-.03-3.07-1.88-3.07-1.88 0-2.17 1.47-2.17 2.98v5.69h-3v-11h2.88v1.5h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v6.47z"/></svg>
+          Women's Leadership
+        </div>
+        <h3>The Future of Women's Leadership is Biological Intelligence</h3>
+        <p>The next frontier of women's leadership isn't hustle culture or leaning in harder. It's understanding the biology you've been working against.</p>
+        <span class="article-read">Read on LinkedIn →</span>
+      </a>
+      <a href="https://www.linkedin.com/pulse/hidden-cost-ignoring-female-biology-work-vinita-thakur-vrs3c/" target="_blank" rel="noopener" class="article-card fade">
+        <div class="article-platform">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm13.5 12.27h-3v-5.6c0-1.34-.03-3.07-1.88-3.07-1.88 0-2.17 1.47-2.17 2.98v5.69h-3v-11h2.88v1.5h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v6.47z"/></svg>
+          Women's Health · Workplace
+        </div>
+        <h3>The Hidden Cost of Ignoring Female Biology at Work</h3>
+        <p>Burnout, brain fog, low performance — we've been calling it stress. But for millions of women, it's something far more specific.</p>
+        <span class="article-read">Read on LinkedIn →</span>
+      </a>
+      <a href="https://www.linkedin.com/pulse/postpartum-brain-fog-anxiety-identity-loss-whats-actually-thakur-pe4fc/" target="_blank" rel="noopener" class="article-card fade">
+        <div class="article-platform">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm13.5 12.27h-3v-5.6c0-1.34-.03-3.07-1.88-3.07-1.88 0-2.17 1.47-2.17 2.98v5.69h-3v-11h2.88v1.5h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v6.47z"/></svg>
+          Postpartum · Women's Health
+        </div>
+        <h3>Postpartum Brain Fog, Anxiety & Identity Loss — What's Actually Happening</h3>
+        <p>The fourth trimester doesn't end at 12 weeks. Here's what postpartum women in leadership are navigating — and what nobody talks about.</p>
+        <span class="article-read">Read on LinkedIn →</span>
+      </a>
+    </div>
+    <div class="articles-cta fade">
+      <a href="https://www.linkedin.com/in/vinita-thakur-0a9b79125/" target="_blank" rel="noopener" class="btn-primary">View All on LinkedIn</a>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section class="section contact-section" id="contact">
   <div class="container">
@@ -913,6 +1019,7 @@ footer {
         <li><a href="#ventures">Ventures</a></li>
         <li><a href="#story">Story</a></li>
         <li><a href="#blog">Writing</a></li>
+    <li><a href="#articles">Articles</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div>
